@@ -11,7 +11,7 @@ class CountryApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => CountryProvider())],
+      providers: [ChangeNotifierProvider(create: (_) => CountryProvider()..provideCountry())],
       child: const MaterialApp(
         home: CountryScreen(),
       ),
