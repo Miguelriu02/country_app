@@ -14,7 +14,7 @@ class CountryModel {
   Country toCountryEntity() => Country(
       name: name.nativeName.spa.common,
       capital: capital.first,
-      imageUrl: flags.svg,
+      imageUrl: flags.png,
       description: flags.alt);
 
   factory CountryModel.fromJson(Map<String, dynamic> json) => CountryModel(
