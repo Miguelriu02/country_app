@@ -6,8 +6,7 @@ class GetCountryModel {
   final _dio = Dio();
 
   Future<Country> getAnswer() async {
-    final response =
-        await _dio.get('https://restcountries.com/v3.1/name/spain');
+    final response = await _dio.get('https://restcountries.com/v3.1/name/spain');
 
     if (response.statusCode == 200) {
       final countryModel = CountryModel.fromJson(response.data);
