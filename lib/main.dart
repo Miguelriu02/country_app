@@ -13,6 +13,7 @@ class CountryApp extends StatelessWidget {
     return MultiProvider(
       providers: [ChangeNotifierProvider(create: (_) => CountryProvider()..provideCountry())],
       child: const MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: CountryScreen(),
       ),
     );
