@@ -17,6 +17,7 @@ class _CountryScreenState extends State<CountryScreen>
   @override
   Widget build(BuildContext context) {
   final CountryProvider countryProvider = context.watch<CountryProvider>();
+
   Country country = countryProvider.countryList.first;
     // Si 'country' es nulo, muestra el indicador de carga.
     return Scaffold(

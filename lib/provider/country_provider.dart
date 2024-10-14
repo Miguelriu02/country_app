@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CountryProvider extends ChangeNotifier
 {
-  List<Country> countryList = [];
+  late List<Country> countryList;
 
   final getCountry = GetCountryModel();
 
