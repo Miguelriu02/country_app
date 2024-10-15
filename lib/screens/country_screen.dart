@@ -18,8 +18,7 @@ class _CountryScreenState extends State<CountryScreen>
   Widget build(BuildContext context) {
   final CountryProvider countryProvider = context.watch<CountryProvider>();
 
-  Country country = countryProvider.countryList.first;
-    // Si 'country' es nulo, muestra el indicador de carga.
+  Country country = countryProvider.countryList[0];
     return Scaffold(
       appBar: AppBar(
         title: const Text('Información del País'),
@@ -35,8 +34,6 @@ class _CountryScreenState extends State<CountryScreen>
             ),
             Image.network(
               country.imageUrl!,
-              width: 300,
-              height: 200,
             ),
             Text('Capital: ${country.capital}',
               style: const TextStyle(fontSize: 22),
